@@ -1,42 +1,76 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import styled from "@emotion/styled"
+import LogoImage from "./logo"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const HeaderWrapper = styled.header`
+  display: flex;
+  justify-content: space-between;
+  height: 2.5rem;
+  padding: 0 1rem;
+  padding-right: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #ffffff;
+`
+
+const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Nav = styled.nav`
+  display: flex;
+`
+
+const NavList = styled.ul`
+  display: flex;
+`
+
+const NavItem = styled.li`
+  display: flex;
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0 0.7rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #919191;
+    font-weight: 700;
+    &:hover {
+      color: #704c9c;
+    }
+  }
+`
+const activeLinkStyle = { color: "#704c9c" }
+
+const Header = ({ menuItems }) => (
+  <HeaderWrapper>
+    <LogoWrapper>
+      <Link to="/">
+        <LogoImage />
+      </Link>
+    </LogoWrapper>
+    <Nav>
+      <NavList>
+        {Object.keys(menuItems).map(title => (
+          <NavItem key={title}>
+            <Link to={menuItems[title]} activeStyle={activeLinkStyle}>
+              {title}
+            </Link>
+          </NavItem>
+        ))}
+      </NavList>
+    </Nav>
+  </HeaderWrapper>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  menuItem: PropTypes.object,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  menuItem: {},
 }
 
 export default Header
