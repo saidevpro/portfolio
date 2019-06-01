@@ -135,7 +135,7 @@ export default () => (
           <Skills
             size={60}
             css={css`
-              justify-content: space-between;
+              justify-content: center;
               & > * {
                 flex: 0 0 20%;
                 padding: 0.5rem 0;
