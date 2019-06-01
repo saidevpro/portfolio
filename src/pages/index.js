@@ -1,56 +1,65 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 import Layout from "../components/layout"
 import Welcome from "../components/welcome"
 import Container from "../components/container"
 import SEO from "../components/seo"
-import js from "../images/js.png"
-import vue from "../images/vue.png"
-import react from "../images/react.png"
+import SupportedLanguages from "../components/supportedlanguages"
 
-const ProfilContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* text-align: center; */
+const FloattingActionButton = styled.a`
+  position: fixed;
+  bottom: 3.5rem;
+  left: 50%;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: #0e5398;
+  color: #ffffff;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  transform: translateX(-50%);
+  transition: all 0.3s;
 `
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-top: 3%;
-  height: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-`
-
-const LanguageImage = styled.div`
-  display: block;
-  margin-top: 20px;
-  img {
-    padding-right: 10px;
-    vertical-align: middle;
-  }
-`
-
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <Wrapper>
-      <ProfilContainer>
-        <div>
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <Container
+        xl={4}
+        lg={5}
+        md={8}
+        css={css`
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+        `}
+      >
+        <div style={{ marginTop: "10vh" }}>
           <Welcome />
-          <LanguageImage>
-            <img src={js} alt="js" width="40" />
-            <img src={react} alt="react" width="40" />
-            <img src={vue} alt="vue" width="40" />
-          </LanguageImage>
+          <section
+            css={css`
+              margin-top: 35px;
+              display: flex;
+              justify-content: center;
+            `}
+          >
+            <SupportedLanguages
+              size={45}
+              css={css`
+                justify-content: center;
+              `}
+            />
+          </section>
+          <FloattingActionButton href="/working">
+            Work methods ? &rarr;
+          </FloattingActionButton>
         </div>
-      </ProfilContainer>
-    </Wrapper>
-  </Layout>
-)
+      </Container>
+    </Layout>
+  )
+}
 
 export default IndexPage

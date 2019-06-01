@@ -21,5 +21,17 @@ ul {
 }
 
 main {
-    height: calc(100vh - 2.5rem);
+    margin-top: 2.5rem;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+h3 {
+    margin: 1.5rem 0;
+}
+
+h6 {
+    margin: 0.7rem 0;
 }

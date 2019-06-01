@@ -5,6 +5,10 @@ import styled from "@emotion/styled"
 import LogoImage from "./logo"
 
 const HeaderWrapper = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   height: 2.5rem;
@@ -38,11 +42,11 @@ const NavItem = styled.li`
     color: #919191;
     font-weight: 700;
     &:hover {
-      color: #704c9c;
+      color: #0e5398;
     }
   }
 `
-const activeLinkStyle = { color: "#704c9c" }
+const activeLinkStyle = { color: "#0e5398" }
 
 const Header = ({ menuItems }) => (
   <HeaderWrapper>
