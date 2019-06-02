@@ -12,7 +12,7 @@ export default () => (
   <Layout>
     <SEO title="contact" />
     <Space size={5} />
-    <Container xl={8} lg={10}>
+    <Container xl={7} lg={8}>
       <section>
         <SecondaryText size={1.7}>Contact</SecondaryText>
         <PrimaryText size={2.5} lineHeight={1.2} as="h3">
