@@ -3,13 +3,12 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 
 const SecondaryText = styled.p`
-  font-size: ${props => props.size}rem;
+  font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
   line-height: ${props => props.lineHeight};
   color: #5a5a5a;
 `
 
 SecondaryText.defaultProps = {
-  size: 1,
   lineHeight: 1,
 }
 

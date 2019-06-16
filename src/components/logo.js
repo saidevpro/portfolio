@@ -8,7 +8,7 @@ const Image = () => (
       query {
         placeholderImage: file(relativePath: { eq: "logocoffee2.png" }) {
           childImageSharp {
-            fixed(width: 100) {
+            fixed(width: 120) {
               ...GatsbyImageSharpFixed
             }
           }

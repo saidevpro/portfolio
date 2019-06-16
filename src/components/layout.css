@@ -1,42 +1,39 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 body {
-  font-family: "Ubuntu Mono", "Source Sans Pro", "Lato", "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
-
-  background: url("/bckg-sm.jpg") no-repeat fixed 100% 80%;
-  /* background-size: auto;
-  background-repeat: no-repeat; */
+    font-family: -apple-system, BlinkMacSystemFont,"Ubuntu Mono","Roboto", "Helvetica Neue", Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("/bckg-sm.jpg") no-repeat fixed 80% 90%;
+    color: #2b2b2b;
 }
 
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 main {
-  margin-top: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 p {
-  margin: 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 h3 {
-  margin: 1.5rem 0;
+    margin: 1.5rem 0;
 }
 
 h6 {
-  margin: 0.7rem 0;
+    margin: 0.7rem 0;
 }

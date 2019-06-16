@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Space = ({ size }) => <div style={{ marginTop: `${size}rem` }} />
+const Space = ({ size }) => <br style={{ lineHeight: `${size}rem` }} />
 
 Space.defaultProps = {
   size: 1,

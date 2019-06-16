@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 const PrimaryText = styled.p`
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
   line-height: ${props => props.lineHeight};
-  color: #0e5398;
+  color: #704c9c;
 `
 
 PrimaryText.defaultProps = {

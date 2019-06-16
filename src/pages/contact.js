@@ -15,23 +15,25 @@ export default () => (
     <Container xl={7} lg={8}>
       <section>
         <SecondaryText size={1.7}>Contact</SecondaryText>
-        <PrimaryText size={2.5} lineHeight={1.2} as="h3">
-          If you've got a project in mind, why not get in touch. Let's work
-          together. &#9787;
+        <PrimaryText size={2.2} lineHeight={1.2} as="h3">
+          {/* If you've got a project in mind, why not get in touch. Let's work
+          together. &#9787; */}
+          Si vous avez un projet, ça sera un plaisir de travailler avec vous.
         </PrimaryText>
-        <Space size={2.5} />
+        <Space size={1} />
         <SecondaryText size={1.3}>
-          You can contact me on: <br />
+          {/* You can contact me on: <br /> */}
+          Vous pouvez me contacter par:
         </SecondaryText>
         <PrimaryText
           size={1.1}
-          lineHeight={1.4}
+          lineHeight={1.5}
           css={css`
-            margin: 8px 0;
+            margin-top: 15px;
             font-weight: 600;
           `}
         >
-          Phone: +212 681 282 882 <br />
+          Téléphone: +212 681 282 882 <br />
           Em&#64;il: saidev@gmail.com <br />
         </PrimaryText>
       </section>

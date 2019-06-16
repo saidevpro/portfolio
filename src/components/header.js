@@ -13,9 +13,10 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   height: 2.5rem;
   padding: 0 1rem;
-  padding-right: 3rem;
+  padding-right: 5%;
   border-bottom: 1px solid #e0e0e0;
   background-color: #ffffff;
+  z-index: 1000;
 `
 
 const LogoWrapper = styled.div`
@@ -41,12 +42,13 @@ const NavItem = styled.li`
     font-size: 0.95rem;
     color: #919191;
     font-weight: 700;
+    text-transform: uppercase;
     &:hover {
-      color: #0e5398;
+      color: #704c9c;
     }
   }
 `
-const activeLinkStyle = { color: "#0e5398" }
+const activeLinkStyle = { color: "#704c9c" }
 
 const Header = ({ menuItems }) => (
   <HeaderWrapper>

@@ -6,7 +6,7 @@ const Width = 30
 
 const Avatar = styled.img`
   width: ${props => props.size * Width}px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   border: 1px solid #e0e0e0;
 `
 

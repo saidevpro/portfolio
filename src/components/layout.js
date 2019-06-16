@@ -28,9 +28,9 @@ const Layout = ({ children }) => (
       <>
         <Header
           menuItems={{
-            Home: "/",
+            Acceuil: "/",
+            Moi: "/about",
             Contact: "/contact",
-            About: "/aboutme",
           }}
         />
         <main>{children}</main>
