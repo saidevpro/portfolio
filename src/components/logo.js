@@ -6,9 +6,9 @@ const Image = () => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "logocoffee2.png" }) {
+        placeholderImage: file(relativePath: { eq: "logo.png" }) {
           childImageSharp {
-            fixed(width: 120) {
+            fixed(width: 32) {
               ...GatsbyImageSharpFixed
             }
           }
