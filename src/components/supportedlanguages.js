@@ -11,6 +11,7 @@ const SupportedLanguages = ({ size, className }) => (
         allFile(filter: { relativePath: { regex: "/\\\\w+.lang/" } }) {
           edges {
             node {
+              name,
               childImageSharp {
                 fluid(quality: 100) {
                   src
@@ -40,7 +41,7 @@ const SupportedLanguages = ({ size, className }) => (
           >
             <img
               src={node.childImageSharp.fluid.src}
-              alt="programming language"
+              alt={node.name.substring(0, node.name.indexOf('.'))}
               width={size}
             />
           </li>

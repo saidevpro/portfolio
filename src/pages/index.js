@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 import Layout from "../components/layout"
 import Welcome from "../components/welcome"
 import Container from "../components/container"
+import Row from "../components/row";
 import SEO from "../components/seo"
 import SupportedLanguages from "../components/supportedlanguages"
 import Space from "../components/space"
@@ -29,60 +30,59 @@ const FloattingActionButton = styled.a`
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Home" />
-      <Container
-        xl={4}
-        lg={5}
-        md={8}
+    <SEO title="Acceuil" />
+    <Container>
+      <Space size={3} />
+      <section
         css={css`
-          height: 100%;
-          justify-content: center;
-          align-items: center;
+          margin-top: 10vh;
+          text-align: center;
         `}
       >
-        <section
+        <PrimaryText
+          as="h3"
+          size={2.7}
           css={css`
-            margin-top: 10vh;
-            text-align: center;
+            margin-bottom: 25px;
+            font-weight: 700;
           `}
         >
-          <PrimaryText
-            as="h3"
-            size={2.4}
-            css={css`
-              margin-bottom: 45px;
-            `}
-          >
-            {/* Welcome to my portfolio */}
-            Bienvenu sur mon portfolio
-          </PrimaryText>
-          <SecondaryText
-            lineHeight={1.25}
-            size={1.3}
-            css={css`
-              max-width: 380px;
-              margin: 1rem auto;
-            `}
-          >
-            {/* I'm Sow Mamadou Saïdou freelance in web and mobile development and ui
-      design from Morocco */}
-            Je m'appelle Sow Mamadou Saidou, freelance en développement web et
-            mobile et <PrimaryText as="span">UI designer</PrimaryText> depuis le
-            Maroc.
-          </SecondaryText>
-          <Space size={2} />
-          <SupportedLanguages
-            size={45}
-            css={css`
-              justify-content: center;
-            `}
-          />
-          {/* <FloattingActionButton href="/workplan">
-            Méthode de travail &rarr;
-          </FloattingActionButton> */}
-        </section>
-      </Container>
-    </Layout>
+          Bienvenu sur mon portfolio
+        </PrimaryText>
+        <SecondaryText
+          lineHeight={1.6}
+          size={1.3}
+          css={css`
+            max-width: 440px;
+            margin: 1rem auto;
+          `}
+        >
+          Je m'appelle Sow Mamadou Saidou, freelance en&nbsp;
+           <PrimaryText as ="strong" css={css`
+            color:#000000;
+            font-weight: bolder;
+            `}>Développement web </PrimaryText> et&nbsp;
+          <PrimaryText as="span" css={css`
+            background-image: url('/color-palette.jpg');
+            background-size: contain;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            `}>UI/UX Designer</PrimaryText> depuis le
+          Maroc.
+        </SecondaryText>
+        <Space size={2} />
+        <SupportedLanguages
+          size={50}
+          css={css`
+            justify-content: center;
+          `}
+        />
+      </section>
+    </Container>
+  </Layout>
   )
 }
 

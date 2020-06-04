@@ -4,7 +4,16 @@ import PropTypes from "prop-types"
 
 const SecondaryText = styled.p`
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
-  line-height: ${props => props.lineHeight};
+  ${({ lineHeight }) =>
+  lineHeight &&
+  `
+  line-height: ${lineHeight}
+  ;`}
+  ${({ align }) =>
+  align &&
+  `
+  text-align: ${align}
+  ;`}
   color: #5a5a5a;
 `
 
@@ -15,6 +24,7 @@ SecondaryText.defaultProps = {
 SecondaryText.propTypes = {
   size: PropTypes.number,
   lineHeight: PropTypes.number,
+  align: PropTypes.string,
 }
 
 export default SecondaryText

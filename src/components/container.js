@@ -1,41 +1,24 @@
-import React from "react"
-import styled from "@emotion/styled"
-import PropTypes from "prop-types"
+import React from 'react';
+import Styled from "@emotion/styled"
+import PropTypes from 'prop-types';
 
-const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  @media (min-width: 576px) {
-    width: ${props => (props.sm / 12) * 100}%;
-  }
+const Container = Styled.div`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   @media (min-width: 768px) {
-    width: ${props => (props.md / 12) * 100}%;
+    max-width: 700px;
   }
   @media (min-width: 992px) {
-    width: ${props => (props.lg / 12) * 100}%;
+    max-width: 750px;
   }
   @media (min-width: 1200px) {
-    width: ${props => (props.xl / 12) * 100}%;
+    max-width: 770px;
   }
-`
+`;
 
-Container.defaultProps = {
-  lg: 12,
-  md: 12,
-  xs: 12,
-  xl: 12,
-}
 
-Container.propTypes = {
-  lg: PropTypes.number,
-  md: PropTypes.number,
-  xs: PropTypes.number,
-  xl: PropTypes.number,
-}
+Container.displayName = 'Container';
 
-Container.displayName = "Container"
-
-export default Container
+export default Container;

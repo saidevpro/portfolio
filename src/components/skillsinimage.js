@@ -3,6 +3,10 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { css } from "@emotion/core"
+import PrimaryText from './primarytext';
+import SecondaryText from './secondarytext';
+import Row from './row';
+import Column from './column';
 
 const SupportedLanguages = ({ size, className }) => (
   <StaticQuery
@@ -11,6 +15,7 @@ const SupportedLanguages = ({ size, className }) => (
         allFile(filter: { relativePath: { regex: "/\\\\w+.skill/" } }) {
           edges {
             node {
+              name,
               childImageSharp {
                 fluid(quality: 100) {
                   src
@@ -22,8 +27,7 @@ const SupportedLanguages = ({ size, className }) => (
       }
     `}
     render={data => (
-      <ul
-        className={className}
+      <Row
         css={css`
           display: flex;
           flex-direction: row;
@@ -32,20 +36,26 @@ const SupportedLanguages = ({ size, className }) => (
         `}
       >
         {data.allFile.edges.map(({ node }, key) => (
-          <li
+          <Column
+            flex={4}
+            sm={3}
+            lg={2}
             key={key}
             css={css`
-              padding: 0 0.5rem;
+              padding: 1rem;
+              text-align: center;
             `}
           >
             <img
               src={node.childImageSharp.fluid.src}
-              alt="programming language"
-              width={size}
+              alt={node.name.substring(0, node.name.indexOf('.'))}
+              height={size}
+              css={css`max-width: 100%;`}
             />
-          </li>
+            <SecondaryText size={0.9} css={css`text-transform: capitalize;`}>{node.name.substring(0, node.name.indexOf('.'))}</SecondaryText>
+          </Column>
         ))}
-      </ul>
+      </Row>
     )}
   />
 )

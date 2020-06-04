@@ -4,7 +4,16 @@ import PropTypes from "prop-types"
 
 const PrimaryText = styled.p`
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
-  line-height: ${props => props.lineHeight};
+  ${({ lineHeight }) =>
+  lineHeight &&
+  `
+  line-height: ${lineHeight}
+  ;`}
+  ${({ align }) =>
+  align &&
+  `
+  text-align: ${align}
+  ;`}
   color: #704c9c;
 `
 
@@ -15,6 +24,7 @@ PrimaryText.defaultProps = {
 PrimaryText.propTypes = {
   size: PropTypes.number,
   lineHeight: PropTypes.number,
+  align: PropTypes.string
 }
 
 export default PrimaryText
