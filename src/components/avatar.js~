@@ -3,11 +3,12 @@ import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import {primary as ColorPrimary} from '../data/color'; 
 
-const Width = 30; 
+const Width = 30
+
 const Avatar = styled.img`
   width: ${props => props.size * Width}px;
-  box-shadow: 10px 10px 0 ${ColorPrimary};
-  &::after  {  
+  border-radius: 50%;
+  &::after  {
     content: "";
     display: block;
     position: absolute;

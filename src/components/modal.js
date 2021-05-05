@@ -1,9 +1,10 @@
 import React from "react";
 import { css, keyframes } from "@emotion/core";
+import {primary as ColorPrimary} from '../data/color';
 
 const showModal = keyframes`
     0%{
-        transform: translate(-50%, -50%) scale(1.3);
+        transform: translate(-50%, -50%) scale(0.7);
     }
     100%{
         transform: translate(-50%, -50%) scale(1);
@@ -21,10 +22,9 @@ const formcontainer = css`
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);;
     width: 100%;
     max-width: 700px;
-    /* background-image: url("/form-bck.png"); */
     background-size: contain;
     background-color: #fff;
-    animation: ${showModal} 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+    animation: ${showModal} .5s cubic-bezier(0.165, 0.840, 0.440, 1.000);
 `;
 
 
@@ -35,7 +35,7 @@ const formtitle = css`
     padding: 0.5rem 0;
     margin: 0;
     border-bottom: 1px solid #e0E0E0;
-    background-color: #704c9c;
+    background-color: ${ColorPrimary};
     color: #ffffff;
     font-weight: normal;
     text-align: center;

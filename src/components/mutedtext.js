@@ -1,8 +1,9 @@
 import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
+import {muted as ColorMuted} from '../data/color'; 
 
-const SecondaryText = styled.p`
+const MutedText = styled.p`
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
   ${({ lineHeight }) =>
   lineHeight &&
@@ -14,17 +15,17 @@ const SecondaryText = styled.p`
   `
   text-align: ${align}
   ;`}
-  color: #333333;
+  color: ${ColorMuted};
 `
 
-SecondaryText.defaultProps = {
+MutedText.defaultProps = {
   lineHeight: 1,
 }
 
-SecondaryText.propTypes = {
+MutedText.propTypes = {
   size: PropTypes.number,
   lineHeight: PropTypes.number,
-  align: PropTypes.string,
+  align: PropTypes.string
 }
 
-export default SecondaryText
+export default MutedText

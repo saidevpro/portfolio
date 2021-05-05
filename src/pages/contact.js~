@@ -50,7 +50,10 @@ export default class Contact extends React.Component {
     });
   }
   render () {
-	const {isFormOpen, isSendingForm, isFormSended} = this.state;
+    const isFormOpen = this.state.showForm; 
+    const isSendingForm = this.state.isSendingForm; 
+    const isFormSended = this.state.isFormSended; 
+
     return (
       <Layout>
         <SEO title="Contact" />

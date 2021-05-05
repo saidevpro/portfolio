@@ -2,9 +2,12 @@ import React from "react"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import {primary as ColorPrimary} from '../data/color'; 
+import {secondary as ColorSecondary} from '../data/color'; 
 
-const PrimaryText = styled.p`
+
+const Text = styled.p`
   font-size: ${props => (props.size ? props.size + "rem" : "inherit")};
+  color: #333333;
   ${({ lineHeight }) =>
   lineHeight &&
   `
@@ -43,17 +46,24 @@ const PrimaryText = styled.p`
         text-align: ${xlAlign};
       }
   `}
+`
+
+export const PrimaryText = styled(Text)`
   color: ${ColorPrimary};
 `
 
-PrimaryText.defaultProps = {
+export const SecondaryText = styled(Text)`
+  color: ${ColorSecondary};
+`
+
+Text.defaultProps = {
   lineHeight: 1,
 }
 
-PrimaryText.propTypes = {
+Text.propTypes = {
   size: PropTypes.number,
   lineHeight: PropTypes.number,
   align: PropTypes.string
 }
 
-export default PrimaryText
+export default Text

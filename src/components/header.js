@@ -4,6 +4,7 @@ import React from "react"
 import styled from "@emotion/styled"
 import {keyframes} from "@emotion/core"
 import LogoImage from "./logo"
+import {primary as ColorPrimary} from '../data/color';
 
 const HeaderWrapper = styled.header`
   position: fixed;
@@ -14,7 +15,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   padding: 1rem 5%;
   padding-right: 5%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 1); 
   z-index: 800;
   ${props => (props.useBoxShadow && `
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -74,6 +75,7 @@ const NavItem = styled.li`
     font-size: 0.95rem;
     color: #919191;
     font-weight: 700;
+    text-transform: capitalize;
     @media (max-width: 576px) {
       width: 100%;
       padding-top: 1rem;
@@ -81,7 +83,7 @@ const NavItem = styled.li`
       text-align: center;
     }
     &.active{
-      color: #704c9c;
+      color: ${ColorPrimary};
       &::after{
         content: "";
         display: block;
@@ -102,7 +104,7 @@ const NavItem = styled.li`
       }
     }
     &:hover {
-      color: #704c9c;
+      color: ${ColorPrimary};
     }
   }
 `
@@ -131,7 +133,7 @@ class Header extends React.Component {
         <NavList>
           {Object.keys(menuItems).map(title => (
             <NavItem key={title}>
-              <Link to={menuItems[title]} activeClassName="active">
+              <Link getProps={({isCurrent}) => isCurrent ? { className: "active" } : {}} to={menuItems[title]} activeClassName="active">
                 {title}
               </Link>
             </NavItem>

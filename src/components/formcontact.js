@@ -2,7 +2,7 @@ import React from "react";
 import { css, keyframes } from "@emotion/core";
 import Container from "./container";
 import SecondaryText from "./secondarytext";
-import {Button} from "./button";
+import {ButtonPrimary} from "./button";
 
 const showModal = keyframes`
     0%{
@@ -95,7 +95,7 @@ const modalcover = css`
 
 const FormContact = ({onSubmit}) => (
     <div css={css`padding: 0 1.3rem;`}>
-        <SecondaryText as="p" size={1} css={css`margin-bottom: 40px;font-family: "Roboto";`} lineHeight={1.3}>
+        <SecondaryText as="p" size={1} css={css`margin: 20px 0;font-family: "Roboto";`} lineHeight={1.3}>
             Pour avoir des estimations sur votre projet de création de site web, veuillez remplir le formulaire ci-dessous et le soumettre. Et vous recevrez, dans les deux jours suivants, un dévis complet du projet.
         </SecondaryText>
         <form onSubmit={onSubmit} action="https://getform.io/f/7e57f73b-f9f2-4ea1-9fa3-47fdeee16023" method="POST" id="form-contact" encType="multipart/form-data">
@@ -108,11 +108,11 @@ const FormContact = ({onSubmit}) => (
                 <input type="tel" className="input-control" name="phone" placeholder="Entrer votre numero de téléphone" id="phone" css={forminputarea} autoComplete="off" required/>
             </div>
             <div className="input-group" css={formgroup}>
-                <label htmlFor="content" className="label" css={formlabel}>Projet</label>
+                <label htmlFor="content" className="label" css={formlabel}>Description du projet</label>
                 <textarea name="content" id="content" placeholder="Expliquer vos besoins" id="" cols="30" rows="5" css={forminputarea}></textarea>
             </div>
             <div className="input-group" css={formgroup}>
-                <Button type="submit" className="form-button">Envoyer</Button>
+                <ButtonPrimary type="submit" className="form-button">Envoyer</ButtonPrimary>
             </div>
         </form>
     </div>

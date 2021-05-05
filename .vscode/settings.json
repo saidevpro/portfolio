@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/326be7b2-9c00-447d-92dc-7fa073de36a0/resourceGroups/Portfolio/providers/Microsoft.Web/sites/becode",
+    "appService.deploySubpath": "."
+}

@@ -2,8 +2,8 @@ import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
-import PrimaryText from "./primarytext"
-import SecondaryText from "./secondarytext"
+import {PrimaryText} from "../components/text"
+import {SecondaryText} from "../components/text"
 
 export default () => (
   <section

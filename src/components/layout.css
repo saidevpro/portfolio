@@ -1,3 +1,4 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css"); 
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i&display=swap');
 
@@ -6,11 +7,11 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Fira Code", "Ubuntu Mono", "Roboto",
+  font-family: -apple-system, BlinkMacSystemFont, "Ubuntu Mono", 
     "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;

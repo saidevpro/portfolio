@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { css } from "@emotion/core"
-import PrimaryText from './primarytext';
-import SecondaryText from './secondarytext';
+import {PrimaryText} from "../components/text"
+import {SecondaryText} from "../components/text"
 import Row from './row';
 import Column from './column';
 

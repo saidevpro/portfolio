@@ -19,7 +19,7 @@ const Row = Styled.div`
   ${({ justify }) =>
     justify &&
     `
-    justify-content: ${justify}
+    justify-content: ${justify};
   `}
   ${({ smJustify }) =>
     smJustify &&
